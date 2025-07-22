@@ -12,7 +12,7 @@ public class AttaqueBruteForce implements Attaque {
         System.out.println("Démarrage de l'attaque par force brute...");
         for (int length = 2; length <= MAX_LENGTH; length++) {
             if (genererEtTester(new StringBuilder(), length, cible)) {
-                return; // Mot de passe trouvé, on arrête
+                return;
             }
         }
         System.out.println("Echec de l'attaque. On a tout tenté mais cela nous a pas laissé faire ");
@@ -33,10 +33,10 @@ public class AttaqueBruteForce implements Attaque {
         for (char c : ALPHABET.toCharArray()) {
             current.append(c);
             if (genererEtTester(current, length, cible)) {
-                return true; // Si le mot de passe est trouvé dans un appel récursif, on remonte true
+                return true; 
             }
-            current.deleteCharAt(current.length() - 1); // Backtrack pour essayer le caractère suivant
+            current.deleteCharAt(current.length() - 1); 
         }
-        return false; // Aucun mot de passe trouvé à partir de cette branche
+        return false;
     }
 }

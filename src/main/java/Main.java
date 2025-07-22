@@ -16,7 +16,7 @@ public class Main {
 
         Fabrique factory = new Fabrique();
         Attaque attaque = factory.createAttaque(attaqueType);
-        Cible cible = factory.createTarget(cibleType, login);
+        Cible cible = factory.createCible(cibleType, login);
 
         attaque.attaquer(cible);
     }

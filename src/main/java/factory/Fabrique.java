@@ -21,13 +21,13 @@ public class Fabrique {
     }
 
     // Crée la cible selon le type spécifié (local ou online)
-    public Cible createTarget(String cibleType, String login) {
+    public Cible createCible(String cibleType, String login) {
         if ("local".equalsIgnoreCase(cibleType)) {
             return new ConnexionEnLocale(login);
         } else if ("online".equalsIgnoreCase(cibleType)) {
             return new ConnexionEnLigne(login);
         } else {
-            throw new IllegalArgumentException("Target type not supported");
+            throw new IllegalArgumentException("Cible type not supported");
         }
     }
 }
