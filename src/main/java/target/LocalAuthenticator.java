@@ -1,3 +1,4 @@
+import target.Target;
 public class LocalAuthenticator implements Target {
 
     private String login;

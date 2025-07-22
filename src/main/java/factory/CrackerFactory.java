@@ -1,3 +1,4 @@
+
 public class CrackerFactory {
 
     // Crée l'attaque selon le type spécifié (BruteForce ou Dictionnaire)
